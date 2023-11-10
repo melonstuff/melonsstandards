@@ -1,0 +1,84 @@
+{
+	"doc_module": {
+		"prefix": "doc_module",
+		"body": [
+			"----",
+			"---@module",
+			"---@name $1",
+			"---@realm $2",
+			"----",
+			"---- $3",
+			"----"
+		]
+	},
+	"doc_func": {
+		"prefix": "doc_func",
+		"body": [
+			"----",
+			"---@name $1",
+			"----",
+			"---@arg    $2(name: type) desc",
+			"---@return $3(name: type) desc",
+			"----",
+			"---- $4",
+			"----"
+		]
+	},
+	"doc_method": {
+		"prefix": "doc_method",
+		"body": [
+			"----",
+			"---@method",
+			"---@name $1",
+			"----",
+			"---@arg    $2(name: type) desc",
+			"---@return $3(name: type) desc",
+			"----",
+			"---- $4",
+			"----"
+		]
+	},
+	"doc_panel": {
+		"prefix": "doc_panel",
+		"body": [
+			"----",
+			"---@panel $1",
+			"---@name $2",
+			"----",
+			"---@accessor $3(name: type)",
+			"----",
+			"---- $4",
+			"----",
+			"local PANEL = vgui.Register(\"$1\", {}, \"Panel\")",
+			"AccessorFunc(PANEL, \"\", \"\")",
+			"$2 = PANEL"
+		]
+	},
+	"doc_class": {
+		"prefix": "doc_class",
+		"body": [
+			"----",
+			"---@class $1",
+			"---@name $2",
+			"----",
+			"---@accessor $3(name: type)",
+			"----",
+			"local $1 = {}",
+			"$1.__index = $1",
+			"$2 = $1"
+		]
+	},
+	"doc_enum": {
+		"prefix": "doc_enum",
+		"body": [
+			"----",
+			"---@enumeration",
+			"---@name $1",
+			"----",
+			"---@enum ($2: $3) $4",
+			"----",
+			"$1_TEMP = 0",
+			"$2_TEMP2 =1 "
+		]
+	}
+}
