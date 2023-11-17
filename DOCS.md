@@ -51,6 +51,8 @@
 > - Functions
 > - Enumerations
 > - Methods
+> - Hooks
+> - Console Commands
 
 # Documenting Modules
 > Although modules may be redefined in multiple files (ie. `x = x or {}`)
@@ -182,3 +184,43 @@
 >     return a
 > end
 > ```
+
+# Documenting Hooks
+> Hooks are documented above `hook.Run`, very similarly to functions  
+> Wildcard hooks eg. `Frame:LoadPage:PAGENAME` are indicated with `*`, as in `Frame:LoadPage:*`
+
+> Hooks require a `@hook` call
+
+```lua
+----
+---@hook 
+---@name Frame:LoadPage:*
+----
+---@arg    (num: number) A random number
+---@return (valid: bool) Is this number valid
+----
+---- Example hook documentation
+----
+hook.Run("Frame:LoadPage:Hello", math.random(-100, 100))
+```
+
+# Documenting Console Commands
+> Console commands are documented above their `console.Add` declaration very similarly to functions
+
+> Concommands require `@concommand`  
+> Concommands cannot contain `@return` calls
+
+```lua
+----
+---@concommand
+---@name melon_add
+----
+---@arg (a: number) LHS
+---@arg (b: number) RHS
+----
+---- Adds two numbers together
+----
+concommand.Add("melon_add", function(_, _, args)
+    print(tonumber(args[1]) + tonumber(args[2]))
+end )
+```
