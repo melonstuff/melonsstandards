@@ -16,13 +16,18 @@
 > `----` is the prefix for a doc comment, these need to be paired with
 > atleast one block command, as seen below
 
-> Arguments/returns for things are documented with a `(name: type)` pair
+> `arg`, `return` and `accessor` for things are documented with a `(name: type)` pair
+> 
 
 > You may link to another object with `[add]`, this is qualifed so you can do `[module.add]`, `[module.submodule.add]`, ect, this also works with classes, everything
 
 > Types are any class in the basegame, Lua `type()` result, or `any`  
-> Varargs are documented with `...type` if applicable, otherwise just `...`  
+> Types can be suffixed with `?` to indicate its optional, eg. `(a: number?)`
+
+> Varargs are documented with `...type` if applicable, otherwise just `...`
+  
 > Enums are documented in types by stating `ENUM_`, eg. `NOTIFY_`
+>
 
 > Spacing between name and type in `(name: type)` should match up between lines, for example
 > ```lua
@@ -143,7 +148,8 @@
 > Enums are documented using a special command called `@enum`
 
 > Enums must provide an `@enumeration` call  
-> Enum prefixes are defined in the `@name` call, and is assumed to be `_` concatenated
+> Enum prefixes are defined in the `@name` call, and is assumed to be `_` concatenated  
+> Enums do not require a value to be given, but do require a name in parens
 
 > ```lua
 > ----
@@ -153,8 +159,8 @@
 > ---@enum (GENERIC: 0) A generic notification
 > ---@enum (ERROR:   1) An error notification
 > ---@enum (UNDO:    2) An undo notification
-> ---@enum (HINT:    3) A hint notification
-> ---@enum (CLEANUP: 4) A cleanup notification
+> ---@enum (HINT      ) A hint notification
+> ---@enum (CLEANUP   ) A cleanup notification
 > ----
 > ---- Example using the wikis NOTIFY enum
 > ----
