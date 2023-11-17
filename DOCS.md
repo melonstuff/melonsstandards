@@ -22,9 +22,8 @@
 > You may link to another object with `[add]`, this is qualifed so you can do `[module.add]`, `[module.submodule.add]`, ect, this also works with classes, everything
 
 > Types are any class in the basegame, Lua `type()` result, or `any`  
-> Types can be suffixed with `?` to indicate its optional, eg. `(a: number?)`
-> Varargs are documented with `...type` if applicable, otherwise just `...`
-  
+> Types can be suffixed with `?` to indicate its optional, eg. `(a: number?)`  
+> Varargs are documented with `...type` if applicable, otherwise just `...`  
 > Enums are documented in types by stating `ENUM_`, eg. `NOTIFY_`
 >
 
