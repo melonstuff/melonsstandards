@@ -27,15 +27,16 @@
 > Newlines are allowed anywhere that you feel they would look best, dont act dumb.
 
 # Naming
-> Local and global variables should be `snakecase`
-> ```lua
-> local abc_def = 123
-> ```
-
-> All table members that are considered Modules should be `snakecase`, see the Modules section  
-> All table members that are not considered modules should be `PascalCase`  
-> All table methods should be `PascalCase`, eg `PANEL:AbcDef()`  
-> All class tables should be `UPPER_CASE`, see the Classes section
+| Type | Rule |
+| :--: | :--: |
+| `local`s | `snakecase` |
+| globals | `snakecase` |
+| modules | `snakecase` |
+| `table.Members` | `PascalCase` |
+| `table:Methods` | `PascalCase` |
+| `local CLASS`   | `UPPER_CASE` |
+| `local PANEL`   | `UPPER_CASE` |
+| `function(ar, gs)` | `snakecase` |
 
 # CStyle Syntax Usage
 | Disallowed | Use Instead |
