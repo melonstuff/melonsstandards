@@ -36,7 +36,10 @@
 | `table:Methods` | `PascalCase` |
 | `local CLASS`   | `UPPER_CASE` |
 | `local PANEL`   | `UPPER_CASE` |
-| `function(ar, gs)` | `snakecase` |
+| `function(ar, gs)`  | `snakecase` |
+| `String:Identifiers` | `Pascal:Case`|
+| `ENUM_` | `UPPER_CASE` |
+| `RTAndMaterialNames` | `PascalCase` |
 
 # CStyle Syntax Usage
 | Disallowed | Use Instead |
@@ -92,9 +95,10 @@
 > All classes should have a reference stored in your global module, as showed above
 
 # Enumerations
-> Enums should be prefixed globals in upper `SNAKE_CASE`
+> Enums can be globals but should generally be in a module
 >```lua
-> NOTIFY_GENERIC = 0
-> NOTIFY_ERROR = 1
-> --- ect
+> global_module.ENUM_A = 1
+> global_module.ENUM_B = 2
+> global_module.ENUM_C = 3
+>
 >```

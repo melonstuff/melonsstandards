@@ -193,12 +193,11 @@
 > Hooks are documented above `hook.Run`, very similarly to functions  
 > Wildcard hooks eg. `Frame:LoadPage:PAGENAME` are indicated with `*`, as in `Frame:LoadPage:*`
 
-> Hooks require a `@hook` call
+> Hooks require a `@hook` call with the hookname
 
 ```lua
 ----
----@hook 
----@name Frame:LoadPage:*
+---@hook Frame:LoadPage:*
 ----
 ---@arg    (num: number) A random number
 ---@return (valid: bool) Is this number valid
@@ -211,13 +210,12 @@ hook.Run("Frame:LoadPage:Hello", math.random(-100, 100))
 # Documenting Console Commands
 > Console commands are documented above their `console.Add` declaration very similarly to functions
 
-> Concommands require `@concommand`  
+> Concommands require `@concommand` with the concommand name
 > Concommands cannot contain `@return` calls
 
 ```lua
 ----
----@concommand
----@name melon_add
+---@concommand melon_add
 ----
 ---@arg (a: number) LHS
 ---@arg (b: number) RHS
